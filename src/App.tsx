@@ -1,3 +1,12 @@
+import { Provider as ReduxProvier } from 'react-redux'
+
+import { store } from './store'
+import { Player } from './pages/Player'
+
 export function App() {
-  return <span>ignite-reactjs-redux-zustand</span>
+  return (
+    <ReduxProvier store={store}>
+      <Player />
+    </ReduxProvier>
+  )
 }
