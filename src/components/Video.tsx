@@ -5,10 +5,10 @@ import { useCurrentLesson, useStore } from '../store'
 
 export function Video() {
   const { currentLesson } = useCurrentLesson()
-  const { isLoading, next } = useStore(state => {
+  const { isLoading, next } = useStore((state) => {
     return {
       isLoading: state.isLoading,
-      next: state.next
+      next: state.next,
     }
   })
 
@@ -18,12 +18,11 @@ export function Video() {
 
   return (
     <div className="w-full bg-zinc-950 aspect-video">
-      {isLoading  ? (
-        <div className='flex h-full items-center justify-center'>
-          <Loader className='1-6 h-6 text-zinc-400 animate-spin' />
-          </div>
+      {isLoading ? (
+        <div className="flex h-full items-center justify-center">
+          <Loader className="1-6 h-6 text-zinc-400 animate-spin" />
+        </div>
       ) : (
-
         <Player
           width="100%"
           height="100%"

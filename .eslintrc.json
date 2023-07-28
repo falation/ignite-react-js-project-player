@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "@rocketseat/eslint-config/react",
+    "react-app"
+  ],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "import/no-anonymous-default-export": "off"
+  }
+}
