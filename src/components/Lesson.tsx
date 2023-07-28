@@ -4,7 +4,7 @@ interface LessonProps {
   name: string
   duration: string
   isCurrent: boolean
-  onPlay: () => {}
+  onPlay: () => void
 }
 
 export function Lesson({ isCurrent = false, name, duration, onPlay }: LessonProps) {
